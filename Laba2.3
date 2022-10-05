@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+  int P, Q, c;
+  printf("Enter the number P: ");
+  scanf_s("%d", &P);
+  printf("Enter the number Q: ");
+  scanf_s("%d", &Q);
+
+  while (Q)
+  {
+    c = P % Q;
+    P = Q;
+    Q = c;
+  }
+
+  if (P == 1)
+    printf("Numbers are coprime.");
+  if (P != 1)
+    printf("The numbers are not coprime.");
+
+  return 0;
+}
